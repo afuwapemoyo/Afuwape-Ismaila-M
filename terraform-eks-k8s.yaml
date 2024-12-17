@@ -1,5 +1,5 @@
 #terrafoam to create k8s cluster.
-https://antonputra.com/terraform/how-to-create-eks-cluster-using-terraform/
+#https://antonputra.com/terraform/how-to-create-eks-cluster-using-terraform/
 
 apiVersion: apps/v1
 kind: Deployment
