@@ -1,0 +1,383 @@
+
+afuwa@LAPTOP-B1MBUT11 MINGW64 ~
+$ cd Downloads/
+
+
+afuwa@LAPTOP-B1MBUT11 MINGW64 ~/Downloads
+$
+
+afuwa@LAPTOP-B1MBUT11 MINGW64 ~/Downloads
+$ ssh -i "cosco.pem" ec2-user@ec2-13-221-94-67.compute-1.amazonaws.com
+The authenticity of host 'ec2-13-221-94-67.compute-1.amazonaws.com (13.221.94.67)' can't be established.
+ECDSA key fingerprint is SHA256:R6uBeh9Y/Pm9L9rFcjIztVxl29pq7mS/ptAF462QPKg.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'ec2-13-221-94-67.compute-1.amazonaws.com,13.221.94.67' (ECDSA) to the list of known hosts.
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+[ec2-user@ip-172-31-92-92 ~]$ ^C
+[ec2-user@ip-172-31-92-92 ~]$
+[ec2-user@ip-172-31-92-92 ~]$
+[ec2-user@ip-172-31-92-92 ~]$ git --version
+-bash: git: command not found
+[ec2-user@ip-172-31-92-92 ~]$ yum install git
+Error: This command has to be run with superuser privileges (under the root user on most systems).
+[ec2-user@ip-172-31-92-92 ~]$
+[ec2-user@ip-172-31-92-92 ~]$ sudo su -
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]# yum install git
+Amazon Linux 2023 Kernel Livepatch repository                                     151 kB/s |  17 kB     00:00
+Dependencies resolved.
+==================================================================================================================
+ Package                     Architecture      Version                               Repository              Size
+==================================================================================================================
+Installing:
+ git                         x86_64            2.47.1-1.amzn2023.0.3                 amazonlinux             52 k
+Installing dependencies:
+ git-core                    x86_64            2.47.1-1.amzn2023.0.3                 amazonlinux            4.5 M
+ git-core-doc                noarch            2.47.1-1.amzn2023.0.3                 amazonlinux            2.8 M
+ perl-Error                  noarch            1:0.17029-5.amzn2023.0.2              amazonlinux             41 k
+ perl-File-Find              noarch            1.37-477.amzn2023.0.7                 amazonlinux             25 k
+ perl-Git                    noarch            2.47.1-1.amzn2023.0.3                 amazonlinux             40 k
+ perl-TermReadKey            x86_64            2.38-9.amzn2023.0.2                   amazonlinux             36 k
+ perl-lib                    x86_64            0.65-477.amzn2023.0.7                 amazonlinux             15 k
+
+Transaction Summary
+==================================================================================================================
+Install  8 Packages
+
+Total download size: 7.5 M
+Installed size: 37 M
+Is this ok [y/N]: y
+Downloading Packages:
+(1/8): git-2.47.1-1.amzn2023.0.3.x86_64.rpm                                        799 kB/s |  52 kB     00:00
+(2/8): perl-Error-0.17029-5.amzn2023.0.2.noarch.rpm                                1.0 MB/s |  41 kB     00:00
+(3/8): git-core-doc-2.47.1-1.amzn2023.0.3.noarch.rpm                                20 MB/s | 2.8 MB     00:00
+(4/8): perl-File-Find-1.37-477.amzn2023.0.7.noarch.rpm                             683 kB/s |  25 kB     00:00
+(5/8): perl-TermReadKey-2.38-9.amzn2023.0.2.x86_64.rpm                             1.8 MB/s |  36 kB     00:00
+(6/8): perl-Git-2.47.1-1.amzn2023.0.3.noarch.rpm                                   1.5 MB/s |  40 kB     00:00
+(7/8): git-core-2.47.1-1.amzn2023.0.3.x86_64.rpm                                    22 MB/s | 4.5 MB     00:00
+(8/8): perl-lib-0.65-477.amzn2023.0.7.x86_64.rpm                                   313 kB/s |  15 kB     00:00
+-------------------------------------------------------------------------------------------------------------------
+Total                                                                               30 MB/s | 7.5 MB     00:00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                           1/1
+  Installing       : git-core-2.47.1-1.amzn2023.0.3.x86_64                                                     1/8
+  Installing       : git-core-doc-2.47.1-1.amzn2023.0.3.noarch                                                 2/8
+  Installing       : perl-lib-0.65-477.amzn2023.0.7.x86_64                                                     3/8
+  Installing       : perl-TermReadKey-2.38-9.amzn2023.0.2.x86_64                                               4/8
+  Installing       : perl-File-Find-1.37-477.amzn2023.0.7.noarch                                               5/8
+  Installing       : perl-Error-1:0.17029-5.amzn2023.0.2.noarch                                                6/8
+  Installing       : perl-Git-2.47.1-1.amzn2023.0.3.noarch                                                     7/8
+  Installing       : git-2.47.1-1.amzn2023.0.3.x86_64                                                          8/8
+  Running scriptlet: git-2.47.1-1.amzn2023.0.3.x86_64                                                          8/8
+  Verifying        : git-2.47.1-1.amzn2023.0.3.x86_64                                                          1/8
+  Verifying        : git-core-2.47.1-1.amzn2023.0.3.x86_64                                                     2/8
+  Verifying        : git-core-doc-2.47.1-1.amzn2023.0.3.noarch                                                 3/8
+  Verifying        : perl-Error-1:0.17029-5.amzn2023.0.2.noarch                                                4/8
+  Verifying        : perl-File-Find-1.37-477.amzn2023.0.7.noarch                                               5/8
+  Verifying        : perl-Git-2.47.1-1.amzn2023.0.3.noarch                                                     6/8
+  Verifying        : perl-TermReadKey-2.38-9.amzn2023.0.2.x86_64                                               7/8
+  Verifying        : perl-lib-0.65-477.amzn2023.0.7.x86_64                                                     8/8
+===================================================================================================================
+WARNING:
+  A newer release of "Amazon Linux" is available.
+
+  Available Versions:
+
+  Version 2023.7.20250623:
+    Run the following command to upgrade to 2023.7.20250623:
+
+      dnf upgrade --releasever=2023.7.20250623
+
+    Release notes:
+     https://docs.aws.amazon.com/linux/al2023/release-notes/relnotes-2023.7.20250623.html
+
+===================================================================================================================
+
+Installed:
+  git-2.47.1-1.amzn2023.0.3.x86_64                         git-core-2.47.1-1.amzn2023.0.3.x86_64
+  git-core-doc-2.47.1-1.amzn2023.0.3.noarch                perl-Error-1:0.17029-5.amzn2023.0.2.noarch
+  perl-File-Find-1.37-477.amzn2023.0.7.noarch              perl-Git-2.47.1-1.amzn2023.0.3.noarch
+  perl-TermReadKey-2.38-9.amzn2023.0.2.x86_64              perl-lib-0.65-477.amzn2023.0.7.x86_64
+
+Complete!
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]# git --version
+git version 2.47.1
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]# mkdir -p /opt/atlassian/bitbucket
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]# ls -ltr /opt/atlassian/bitbucket
+total 0
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]# ls -ltr /opt/atlassian/
+total 0
+drwxr-xr-x. 2 root root 6 Jun 25 01:25 bitbucket
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]# mkdir -p /application/stash-home
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]# ls -ltr /application/stash-home/
+total 0
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]# ls -ltr /application/
+total 0
+drwxr-xr-x. 2 root root 6 Jun 25 01:26 stash-home
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]# pwd
+/root
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]# wget https://www.atlassian.com/software/stash/downloads/binary/atlassian-bitbucket-7.21.18-x64.bin
+--2025-06-25 01:45:57--  https://www.atlassian.com/software/stash/downloads/binary/atlassian-bitbucket-7.21.18-x64.bin
+Resolving www.atlassian.com (www.atlassian.com)... 13.227.180.4
+Connecting to www.atlassian.com (www.atlassian.com)|13.227.180.4|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://product-downloads.atlassian.com/software/stash/downloads/atlassian-bitbucket-7.21.18-x64.bin [following]
+--2025-06-25 01:45:57--  https://product-downloads.atlassian.com/software/stash/downloads/atlassian-bitbucket-7.21.18-x64.bin
+Resolving product-downloads.atlassian.com (product-downloads.atlassian.com)... 3.162.95.144, 2600:9000:26c1:ee00:1f:ab86:b54:f861, 2600:9000:26c1:9600:1f:ab86:b54:f861, ...
+Connecting to product-downloads.atlassian.com (product-downloads.atlassian.com)|3.162.95.144|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 600914333 (573M) [application/octet-stream]
+Saving to: ‘atlassian-bitbucket-7.21.18-x64.bin’
+
+atlassian-bitbucket-7.21.18- 100%[=============================================>] 573.08M  91.7MB/s    in 6.3s
+
+2025-06-25 01:46:03 (91.3 MB/s) - ‘atlassian-bitbucket-7.21.18-x64.bin’ saved [600914333/600914333]
+
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]# ls -ltr
+total 586832
+-rw-r--r--. 1 root root 600914333 Nov 13  2023 atlassian-bitbucket-7.21.18-x64.bin
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]# chmod +x atlassian-bitbucket-7.21.18-x64.bin
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]# ls -ltr
+total 586832
+-rwxr-xr-x. 1 root root 600914333 Nov 13  2023 atlassian-bitbucket-7.21.18-x64.bin
+[root@ip-172-31-92-92 ~]#
+[root@ip-172-31-92-92 ~]# sudo ./atlassian-bitbucket-7.21.18-x64.bin
+Installing fontconfig...
+Last metadata expiration check: 0:24:25 ago on Wed Jun 25 01:23:45 2025.
+Dependencies resolved.
+===============================================================================================================================================
+ Package                                   Architecture           Version                                    Repository                   Size
+===============================================================================================================================================
+Installing:
+ fontconfig                                x86_64                 2.13.94-2.amzn2023.0.2                     amazonlinux                 273 k
+Installing dependencies:
+ cairo                                     x86_64                 1.18.0-4.amzn2023.0.1                      amazonlinux                 718 k
+ fonts-filesystem                          noarch                 1:2.0.5-12.amzn2023.0.2                    amazonlinux                 9.5 k
+ freetype                                  x86_64                 2.13.2-5.amzn2023.0.1                      amazonlinux                 423 k
+ google-noto-fonts-common                  noarch                 20201206-2.amzn2023.0.2                    amazonlinux                  15 k
+ google-noto-sans-vf-fonts                 noarch                 20201206-2.amzn2023.0.2                    amazonlinux                 492 k
+ graphite2                                 x86_64                 1.3.14-7.amzn2023.0.2                      amazonlinux                  97 k
+ harfbuzz                                  x86_64                 7.0.0-2.amzn2023.0.2                       amazonlinux                 873 k
+ langpacks-core-font-en                    noarch                 3.0-21.amzn2023.0.4                        amazonlinux                  10 k
+ libX11                                    x86_64                 1.8.10-2.amzn2023.0.1                      amazonlinux                 659 k
+ libX11-common                             noarch                 1.8.10-2.amzn2023.0.1                      amazonlinux                 147 k
+ libXau                                    x86_64                 1.0.11-6.amzn2023.0.1                      amazonlinux                  33 k
+ libXext                                   x86_64                 1.3.6-1.amzn2023.0.1                       amazonlinux                  42 k
+ libXrender                                x86_64                 0.9.11-6.amzn2023.0.1                      amazonlinux                  29 k
+ libbrotli                                 x86_64                 1.0.9-4.amzn2023.0.2                       amazonlinux                 315 k
+ libpng                                    x86_64                 2:1.6.37-10.amzn2023.0.6                   amazonlinux                 128 k
+ libxcb                                    x86_64                 1.17.0-1.amzn2023.0.1                      amazonlinux                 235 k
+ pixman                                    x86_64                 0.43.4-1.amzn2023.0.4                      amazonlinux                 296 k
+ xml-common                                noarch                 0.6.3-56.amzn2023.0.2                      amazonlinux                  32 k
+
+Transaction Summary
+===============================================================================================================================================
+Install  19 Packages
+
+Total download size: 4.7 M
+Installed size: 13 M
+Downloading Packages:
+(1/19): fonts-filesystem-2.0.5-12.amzn2023.0.2.noarch.rpm                                                      194 kB/s | 9.5 kB     00:00
+(2/19): cairo-1.18.0-4.amzn2023.0.1.x86_64.rpm                                                                  12 MB/s | 718 kB     00:00
+(3/19): fontconfig-2.13.94-2.amzn2023.0.2.x86_64.rpm                                                           3.9 MB/s | 273 kB     00:00
+(4/19): google-noto-fonts-common-20201206-2.amzn2023.0.2.noarch.rpm                                            666 kB/s |  15 kB     00:00
+(5/19): freetype-2.13.2-5.amzn2023.0.1.x86_64.rpm                                                               10 MB/s | 423 kB     00:00
+(6/19): google-noto-sans-vf-fonts-20201206-2.amzn2023.0.2.noarch.rpm                                            14 MB/s | 492 kB     00:00
+(7/19): graphite2-1.3.14-7.amzn2023.0.2.x86_64.rpm                                                             2.0 MB/s |  97 kB     00:00
+(8/19): langpacks-core-font-en-3.0-21.amzn2023.0.4.noarch.rpm                                                  340 kB/s |  10 kB     00:00
+(9/19): libX11-common-1.8.10-2.amzn2023.0.1.noarch.rpm                                                         5.3 MB/s | 147 kB     00:00
+(10/19): libXau-1.0.11-6.amzn2023.0.1.x86_64.rpm                                                               848 kB/s |  33 kB     00:00
+(11/19): libX11-1.8.10-2.amzn2023.0.1.x86_64.rpm                                                               8.4 MB/s | 659 kB     00:00
+(12/19): harfbuzz-7.0.0-2.amzn2023.0.2.x86_64.rpm                                                              6.0 MB/s | 873 kB     00:00
+(13/19): libXext-1.3.6-1.amzn2023.0.1.x86_64.rpm                                                               1.2 MB/s |  42 kB     00:00
+(14/19): libXrender-0.9.11-6.amzn2023.0.1.x86_64.rpm                                                           945 kB/s |  29 kB     00:00
+(15/19): libpng-1.6.37-10.amzn2023.0.6.x86_64.rpm                                                              5.0 MB/s | 128 kB     00:00
+(16/19): libbrotli-1.0.9-4.amzn2023.0.2.x86_64.rpm                                                             6.8 MB/s | 315 kB     00:00
+(17/19): libxcb-1.17.0-1.amzn2023.0.1.x86_64.rpm                                                               4.7 MB/s | 235 kB     00:00
+(18/19): pixman-0.43.4-1.amzn2023.0.4.x86_64.rpm                                                               8.5 MB/s | 296 kB     00:00
+(19/19): xml-common-0.6.3-56.amzn2023.0.2.noarch.rpm                                                           1.3 MB/s |  32 kB     00:00
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                           14 MB/s | 4.7 MB     00:00
+Running transaction check
+Transaction check succeeded.
+Running transaction test
+Transaction test succeeded.
+Running transaction
+  Preparing        :                                                                                                                       1/1
+  Installing       : libpng-2:1.6.37-10.amzn2023.0.6.x86_64                                                                               1/19
+  Installing       : fonts-filesystem-1:2.0.5-12.amzn2023.0.2.noarch                                                                      2/19
+  Running scriptlet: xml-common-0.6.3-56.amzn2023.0.2.noarch                                                                              3/19
+  Installing       : xml-common-0.6.3-56.amzn2023.0.2.noarch                                                                              3/19
+  Installing       : pixman-0.43.4-1.amzn2023.0.4.x86_64                                                                                  4/19
+  Installing       : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                                5/19
+  Installing       : libXau-1.0.11-6.amzn2023.0.1.x86_64                                                                                  6/19
+  Installing       : libxcb-1.17.0-1.amzn2023.0.1.x86_64                                                                                  7/19
+  Installing       : libX11-common-1.8.10-2.amzn2023.0.1.noarch                                                                           8/19
+  Installing       : libX11-1.8.10-2.amzn2023.0.1.x86_64                                                                                  9/19
+  Installing       : libXext-1.3.6-1.amzn2023.0.1.x86_64                                                                                 10/19
+  Installing       : libXrender-0.9.11-6.amzn2023.0.1.x86_64                                                                             11/19
+  Installing       : graphite2-1.3.14-7.amzn2023.0.2.x86_64                                                                              12/19
+  Installing       : google-noto-fonts-common-20201206-2.amzn2023.0.2.noarch                                                             13/19
+  Installing       : google-noto-sans-vf-fonts-20201206-2.amzn2023.0.2.noarch                                                            14/19
+  Installing       : langpacks-core-font-en-3.0-21.amzn2023.0.4.noarch                                                                   15/19
+  Installing       : cairo-1.18.0-4.amzn2023.0.1.x86_64                                                                                  16/19
+  Installing       : harfbuzz-7.0.0-2.amzn2023.0.2.x86_64                                                                                17/19
+  Installing       : freetype-2.13.2-5.amzn2023.0.1.x86_64                                                                               18/19
+  Installing       : fontconfig-2.13.94-2.amzn2023.0.2.x86_64                                                                            19/19
+  Running scriptlet: fontconfig-2.13.94-2.amzn2023.0.2.x86_64                                                                            19/19
+  Verifying        : cairo-1.18.0-4.amzn2023.0.1.x86_64                                                                                   1/19
+  Verifying        : fontconfig-2.13.94-2.amzn2023.0.2.x86_64                                                                             2/19
+  Verifying        : fonts-filesystem-1:2.0.5-12.amzn2023.0.2.noarch                                                                      3/19
+  Verifying        : freetype-2.13.2-5.amzn2023.0.1.x86_64                                                                                4/19
+  Verifying        : google-noto-fonts-common-20201206-2.amzn2023.0.2.noarch                                                              5/19
+  Verifying        : google-noto-sans-vf-fonts-20201206-2.amzn2023.0.2.noarch                                                             6/19
+  Verifying        : graphite2-1.3.14-7.amzn2023.0.2.x86_64                                                                               7/19
+  Verifying        : harfbuzz-7.0.0-2.amzn2023.0.2.x86_64                                                                                 8/19
+  Verifying        : langpacks-core-font-en-3.0-21.amzn2023.0.4.noarch                                                                    9/19
+  Verifying        : libX11-1.8.10-2.amzn2023.0.1.x86_64                                                                                 10/19
+  Verifying        : libX11-common-1.8.10-2.amzn2023.0.1.noarch                                                                          11/19
+  Verifying        : libXau-1.0.11-6.amzn2023.0.1.x86_64                                                                                 12/19
+  Verifying        : libXext-1.3.6-1.amzn2023.0.1.x86_64                                                                                 13/19
+  Verifying        : libXrender-0.9.11-6.amzn2023.0.1.x86_64                                                                             14/19
+  Verifying        : libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                                                               15/19
+  Verifying        : libpng-2:1.6.37-10.amzn2023.0.6.x86_64                                                                              16/19
+  Verifying        : libxcb-1.17.0-1.amzn2023.0.1.x86_64                                                                                 17/19
+  Verifying        : pixman-0.43.4-1.amzn2023.0.4.x86_64                                                                                 18/19
+  Verifying        : xml-common-0.6.3-56.amzn2023.0.2.noarch                                                                             19/19
+===============================================================================================================================================
+WARNING:
+  A newer release of "Amazon Linux" is available.
+
+  Available Versions:
+
+  Version 2023.7.20250623:
+    Run the following command to upgrade to 2023.7.20250623:
+
+      dnf upgrade --releasever=2023.7.20250623
+
+    Release notes:
+     https://docs.aws.amazon.com/linux/al2023/release-notes/relnotes-2023.7.20250623.html
+
+===============================================================================================================================================
+
+Installed:
+  cairo-1.18.0-4.amzn2023.0.1.x86_64                                    fontconfig-2.13.94-2.amzn2023.0.2.x86_64
+  fonts-filesystem-1:2.0.5-12.amzn2023.0.2.noarch                       freetype-2.13.2-5.amzn2023.0.1.x86_64
+  google-noto-fonts-common-20201206-2.amzn2023.0.2.noarch               google-noto-sans-vf-fonts-20201206-2.amzn2023.0.2.noarch
+  graphite2-1.3.14-7.amzn2023.0.2.x86_64                                harfbuzz-7.0.0-2.amzn2023.0.2.x86_64
+  langpacks-core-font-en-3.0-21.amzn2023.0.4.noarch                     libX11-1.8.10-2.amzn2023.0.1.x86_64
+  libX11-common-1.8.10-2.amzn2023.0.1.noarch                            libXau-1.0.11-6.amzn2023.0.1.x86_64
+  libXext-1.3.6-1.amzn2023.0.1.x86_64                                   libXrender-0.9.11-6.amzn2023.0.1.x86_64
+  libbrotli-1.0.9-4.amzn2023.0.2.x86_64                                 libpng-2:1.6.37-10.amzn2023.0.6.x86_64
+  libxcb-1.17.0-1.amzn2023.0.1.x86_64                                   pixman-0.43.4-1.amzn2023.0.4.x86_64
+  xml-common-0.6.3-56.amzn2023.0.2.noarch
+
+Complete!
+Unpacking JRE ...
+Starting Installer ...
+
+Bitbucket 7.21.18 installation wizard
+Would you like to install or upgrade an instance?
+Install a new instance [1, Enter], Upgrade an existing instance [2]
+1
+
+Install Bitbucket 7.21.18
+What type of instance are you looking to install?
+Install a Server instance [1, Enter], Install a Data Center instance [2], Install a Smart Mirroring instance [3]
+1
+Where should Bitbucket be installed?
+
+Select the folder where you would like Bitbucket 7.21.18 to be installed,
+then click Next.
+[/opt/atlassian/bitbucket/7.21.18]
+
+Default location for Bitbucket home directory
+
+The location for Bitbucket data.
+This will be the default location for repositories, plugins, and other data.
+
+Ensure that this location is not used by another Bitbucket installation.
+[/var/atlassian/application-data/bitbucket]
+
+Configure which ports Bitbucket will use.
+
+
+Configure TCP Ports
+Bitbucket requires a TCP port that isn't being used by other applications.
+
+The HTTP port is where users access Bitbucket through their browsers.
+
+Bitbucket also requires ports 7992 and 7993 are available to run the bundled
+search server that provides search functionality to Bitbucket.
+HTTP Port Number
+[7990]
+
+
+
+Run as a service
+For a production server we recommend that you run Bitbucket as a
+Windows/Linux service because Bitbucket will restart automatically when the
+computer restarts.
+Install Bitbucket as a service?
+Yes [y, Enter], No [n]
+y
+Please review your Bitbucket installation settings
+
+
+Installation Summary
+Installation Directory: /opt/atlassian/bitbucket/7.21.18
+Home Directory: /var/atlassian/application-data/bitbucket
+HTTP Port: 7990
+Install as a service: Yes
+
+Install [i, Enter], Exit [e]
+i
+
+Extracting files ...
+
+
+Installation of Bitbucket is complete
+Would you like to launch Bitbucket?
+Yes [y, Enter], No [n]
+y
+
+Please wait a few moments while Bitbucket starts up.
+Launching Bitbucket ...
+
+Installation of Bitbucket 7.21.18 is complete
+Your installation of Bitbucket 7.21.18 is now ready and can be accessed via
+your browser.
+Bitbucket 7.21.18 can be accessed at http://localhost:7990
+Launch Bitbucket 7.21.18 in browser?
+Yes [y, Enter], No [n]
+y
+Finishing installation ...
+[root@ip-172-31-92-92 ~]#
