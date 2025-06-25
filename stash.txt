@@ -381,3 +381,51 @@ Yes [y, Enter], No [n]
 y
 Finishing installation ...
 [root@ip-172-31-92-92 ~]#
+
+
+
+========STEPS============
+
+
+1.) https://confluence.atlassian.com/bitbucketserver/install-bitbucket-data-center-872139817.html #install bicbucket
+
+2.) https://confluence.atlassian.com/bitbucketserver/connect-bitbucket-to-postgresql-776640389.html #install postgree
+
+sudo su -
+mkdir -p /application/stash-home
+mkdir -p /opt/atlassian/bitbucket
+chown -R stash:stash /opt/atlassian/bitbucket
+chown -R stash:stash /application/stash-home
+#mkdir -p /opt/atlassian/bitbucket/7.21.18
+yum install git
+wget https://www.atlassian.com/software/stash/downloads/binary/atlassian-bitbucket-7.21.18-x64.bin
+
+chmod u+x atlassian-bitbucket-7.21.18-x64.bin
+sudo ./atlassian-bitbucket-7.21.18-x64.bin
+1
+1
+enter 
+
+Ensure that this location is not used by another Bitbucket installation.
+[/var/atlassian/application-data/bitbucket]
+/application/stash-home/
+
+#create stash user
+sudo useradd -r -m -U -d /home/stash -s /bin/bash stash
+
+#vi /etc/systemd/system/bitbucket.service
+[Unit]
+Description=Atlassian Bitbucket Server Service
+After=syslog.target network.target
+
+[Service]
+Type=forking
+User=stash
+Environment=JAVA_HOME=/opt/atlassian/bitbucket/7.21.18/jre
+Environment=JRE_HOME=/opt/atlassian/bitbucket/7.21.18/jre
+Environment=BITBUCKET_HOME=/var/atlassian/application-data/bitbucket
+ExecStart=/opt/atlassian/bitbucket/7.21.18/bin/start-bitbucket.sh
+ExecStop=/opt/atlassian/bitbucket/7.21.18/bin/stop-bitbucket.sh
+
+[Install]
+WantedBy=multi-user.target
